@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+}
+.wrapper {
+    display: grid;
+    grid-template-areas: 
+    "nav nav nav"
+    "hero hero hero"
+    "about about about"
+    ;
+}
+
+.main-nav {
+    grid-area: nav;
+}
+
+nav > .navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    list-style: none;
+    margin: 0;
+}
+
+nav > .navigation a {
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+    
+}
+
+/* The hero image */
+.hero-section {
+
+    grid-area: hero;
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/taco.jpg");
+  
+    /* Set a specific height */
+    height: 400px;
+  
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  /* Place text in the middle of the image */
+  .hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+
+  .about-us {
+      grid-area: about;
+  }
+
+  .about-text {
+      display: flex;
+      flex-flow: row-wrap;
+      justify-content: space-around;
+  }
